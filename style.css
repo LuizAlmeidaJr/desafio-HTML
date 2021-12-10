@@ -3,44 +3,93 @@
 * {
   margin: 0;
 }
+
+@font-face {
+  font-family: "Android";
+  src: url("pacote-projeto-d010/fonts/idroid.otf") format("opentype");
+}
+
+
 body {
   background-color: #82D9A0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  background-color: green;
+  background-image: linear-gradient(to bottom, #3AD07D, #1A5C37);
   color: white;
-  text-align: center;
-  padding: 1em;
 }
 
-nav {
+h1 {
+  font-family: "Arial Narrow", sans-serif;
+  text-align: center;
+  padding: 1em 0 0.5em 0em;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.801);
+}
+
+#subtitle {
+  text-align: center;
+  padding-bottom: 2em;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.801);
+  text-indent: 0;
+}
+
+.menu {
+  color: white;
   display: inline-block;
-  padding: 0.3em 1em;
+  padding: 0.3em 0.7em;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-align: left;
 }
 
 main {
   background-color: white;
   padding: 1em;
-  width: 80%;
+  width: 800px;
   margin-bottom: 0.8em;
   border-radius: 0.6em;
   text-align: justify;
+  margin: auto;
 }
 
 h2, h3 {
+  font-family: Android, sans-serif;
   color: #145934;
 }
 
+h2 {
+  font-size: 1.9em;
+  padding-top: 0.3em;
+}
+
+h3 {
+  font-size: 1.35em;
+  background-image: linear-gradient(to right, #2fa8654b , white 80%);
+}
+
 p {
+  text-indent: 2em;
   padding: 1em 0;
+  font-size: 1.125em;
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
   color: #145934;
+}
+
+img {
+  margin: auto;
+}
+
+#video {
+  background-color: #1A5C38;
+  padding: 1.2em 0;
+  margin: 0 0 1em 0;
+  width: 800px;
+  text-align: center;
 }
 
 div {
@@ -55,12 +104,15 @@ div > p {
 
 #lista {
   display: flex;
+  justify-content: space-between;
+  margin-right: 15em;
 }
 
 #curiosidade {
   background-color: #2fa866;
   color: white;
   font-weight: bold;
+  text-indent: 0;
 }
 
 footer {
