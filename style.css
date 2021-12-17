@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
   margin: 0;
@@ -9,28 +10,38 @@
   src: url("pacote-projeto-d010/fonts/idroid.otf") format("opentype");
 }
 
+:root {
+  --color0: #c5ebd6;
+  --color1: #83e1ad;
+  --color2: #3ddc84;
+  --color3: #2fa866;
+  --color4: #1a5c37;
+  --color5: #063d1e;
+  --shadow: #000000cc;
+}
 
 body {
-  background-color: #82D9A0;
+  background-color: var(--color1);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  background-image: linear-gradient(to bottom, #3AD07D, #1A5C37);
+  background-image: linear-gradient(to bottom, var(--color2), var(--color4));
   color: white;
 }
 
 h1 {
-  font-family: "Arial Narrow", sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5em;
   text-align: center;
-  padding: 1em 0 0.5em 0em;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.801);
+  padding-top: 1em;
+  text-shadow: 1px 2px 2px var(--shadow);
 }
 
 #subtitle {
   text-align: center;
   padding-bottom: 2em;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.801);
+  text-shadow: 1px 2px 2px var(--shadow);
   text-indent: 0;
 }
 
@@ -42,20 +53,24 @@ h1 {
   font-weight: bold;
   text-align: left;
 }
+.menu:hover {
+  background-color: var(--color1);
+  border-radius: 0.3em 0.3em 0 0;
+}
 
 main {
   background-color: white;
   padding: 1em;
-  width: 800px;
+  max-width: 800px;
   margin-bottom: 0.8em;
-  border-radius: 0.6em;
+  border-radius: 0 0 0.6em 0.6em;
   text-align: justify;
   margin: auto;
 }
 
 h2, h3 {
   font-family: Android, sans-serif;
-  color: #145934;
+  color: var(--color4);
 }
 
 h2 {
@@ -74,26 +89,48 @@ p {
   font-size: 1.125em;
 }
 
+main > p > strong {
+  color: var(--color5)
+}
+
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #145934;
+  color: var(--color4);
 }
 
 img {
+  display: block;
   margin: auto;
+  min-width: 320px;
+  max-width: 800px;
+  width: 100%;
+}
+
+#bugdroid {
+  max-width: 50%;
 }
 
 #video {
-  background-color: #1A5C38;
+  background-color: var(--color4);
   padding: 1.2em 0;
   margin: 0 0 1em 0;
-  width: 800px;
+  max-width: 800px;
+  height: 25em;
   text-align: center;
+  position: relative;
+}
+
+iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
 }
 
 div {
-  background-color: #c5ebd6;
+  background-color: var(--color0);
   border-radius: 0.6em;
 }
 
@@ -102,22 +139,25 @@ div > p {
   border-radius: 0.6em 0.6em 0 0;
 }
 
-#lista {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 15em;
+aside >ul {
+  list-style-type: '\2714\00a0\00a0';
+  columns: 2;
 }
 
 #curiosidade {
-  background-color: #2fa866;
+  background-color: var(--color3);
   color: white;
   font-weight: bold;
   text-indent: 0;
 }
 
 footer {
-  background-color: #1A5C38;
+  background-color: var(--color4);
   color: white;
   font-style: italic;
   text-align: center;
+}
+
+footer > p > a {
+  color: white;
 }
